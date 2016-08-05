@@ -1,0 +1,21 @@
+GameTeam\Bundle\Entity\Equipes:
+    type: entity
+    table: null
+    repositoryClass: GameTeam\Bundle\Repository\EquipesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            column: Nom
+        membres:
+            type: string
+            length: 255
+            nullable: true
+            column: Membres
+    lifecycleCallbacks: {  }
