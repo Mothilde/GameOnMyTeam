@@ -1,0 +1,40 @@
+body {
+   background-color: #1f897f;
+}
+
+#buttonindex {
+
+    margin: auto;
+    display: block;
+    height: 40px;
+    width: 180px;
+    border-radius: 5px;
+}
+
+#keepcalm {
+    display: block;
+    margin: auto;
+    padding: 50px;
+}
+
+
+
+input[type="text"]{
+    width: 30%;
+
+}
+
+input[type="password"]{
+    width: 30%;
+}
+
+label{
+    color: white;
+}
+
+#identificationBlock{
+    border: black 1px;
+    margin: auto;
+    display: block;
+    text-align: center;
+ }

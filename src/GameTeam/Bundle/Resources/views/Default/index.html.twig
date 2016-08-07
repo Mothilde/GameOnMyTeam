@@ -1,1 +1,30 @@
-Game On My Team
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Game On My Team!{% endblock %}</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/gameteam/css/materialize.min.css') }}"  media="screen,projection"/>
+
+    <!--My css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/gameteam/css/style.css') }}" />
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+
+{% block body %}
+    <img src="{{ asset('bundles/gameteam/images/keepcalm.jpg') }}" id="keepcalm" alt="image keep calm"/>
+    <a href="{{ path('fos_user_security_login') }}" class="waves-effect waves-light btn" id="buttonindex"><i class="material-icons left">games</i>Game ON</a>
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

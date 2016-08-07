@@ -1,0 +1,28 @@
+GameTeam\Bundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: GameTeam\Bundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            column: Name
+        pseudo:
+            type: string
+            length: 255
+            column: Pseudo
+        equipe:
+            type: string
+            length: 255
+            column: Equipe
+        mail:
+            type: string
+            length: 255
+            column: Mail
+    lifecycleCallbacks: {  }

@@ -1,0 +1,53 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Game On My Team!{% endblock %}</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/gameteam/css/materialize.min.css') }}"  media="screen,projection"/>
+
+    <!--My css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/gameteam/css/style.css') }}" />
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+
+{% block body %}
+
+    {% block fos_user_content %}
+        {% if error %}
+            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+<div id="identificationBlock">
+        <form action="{{ path("fos_user_security_check") }}" method="post">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+            <label for="username">{{ 'security.login.username'|trans }}</label></br>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" /></br>
+
+            <label for="password">{{ 'security.login.password'|trans }}</label></br>
+            <input type="password" id="password" name="_password" required="required" /></br>
+
+            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label></br>
+
+            <input class="waves-effect waves-light btn" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+        </form>
+    {% endblock fos_user_content %}
+
+</div>
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+
