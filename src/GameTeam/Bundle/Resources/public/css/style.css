@@ -28,13 +28,20 @@ input[type="password"]{
     width: 30%;
 }
 
+input[type="email"]{
+    width: 30%;
+}
+
 label{
     color: white;
 }
 
-#identificationBlock{
-    border: black 1px;
+#identificationBlock, #nologin, #registration {
     margin: auto;
     display: block;
     text-align: center;
+
  }
+
+
+

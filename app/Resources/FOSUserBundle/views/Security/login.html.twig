@@ -23,6 +23,8 @@
 <body>
 
 {% block body %}
+    <img src="{{ asset('bundles/gameteam/images/keepcalm.jpg') }}" id="keepcalm" alt="image keep calm"/>
+
 
     {% block fos_user_content %}
         {% if error %}
@@ -46,6 +48,10 @@
     {% endblock fos_user_content %}
 
 </div>
+<div id="nologin">
+    <h5>Tu n'as pas de compte ?</h5>
+    <a href="{{ path('fos_user_registration_register') }}" class="waves-effect waves-light btn"><i class="material-icons left">games</i>Rejoins-nous !</a>
+    </div>
 {% endblock %}
 {% block javascripts %}{% endblock %}
 </body>
